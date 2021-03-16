@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using Avalonia;
 using Avalonia.Controls;
@@ -58,9 +59,9 @@ namespace BUML.GUI.Views
                         writer.WriteLine($"     {accessibility}{method.Name}() {method.ReturnType.Name}");
                     }
 
-                    foreach (var inderFace in type.GetInterfaces())
+                    foreach (var implementedInterface in type.GetInterfaces())
                     {
-                        inheritanceBuilder.AppendLine($"{inderFace.Name} <.. {type.Name}");
+                        inheritanceBuilder.AppendLine($"{implementedInterface.Name} <.. {type.Name}");
                     }
 
                     writer.WriteLine("  }");
@@ -72,7 +73,9 @@ namespace BUML.GUI.Views
                 writer.WriteLine(inheritanceBuilder.ToString());
             }
             Debug.WriteLine(File.ReadAllText("uml.md"));
-            BashUtility.RunCommand("mmdc -i uml.md -o test.png");
+            
+            if(RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                BashUtility.RunCommand("mmdc -w 4096 -h 2048 -i uml.md -o test.png");
         }
 
         private async void MenuItem_OnClick(object? sender, RoutedEventArgs e)
