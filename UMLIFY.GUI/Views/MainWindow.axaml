@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:UMLIFY.GUI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="UMLIFY.GUI.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="UMLIFY.GUI">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Click="MenuItem_OnClick" Header="_Open..."/>
+                <Separator/>
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Copy"/>
+                <MenuItem Header="Paste"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Bottom">
+            <Image Name="PreviewImage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Image>
+        </StackPanel>
+    </DockPanel>
+</Window>
