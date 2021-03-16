@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UMLIFY.GUI.ViewModels
+namespace BUML.GUI.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {

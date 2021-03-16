@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ReactiveUI;
 
-namespace UMLIFY.GUI.ViewModels
+namespace BUML.GUI.ViewModels
 {
     public class ViewModelBase : ReactiveObject
     {

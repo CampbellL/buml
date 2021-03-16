@@ -9,7 +9,7 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 
-namespace UMLIFY.GUI.Views
+namespace BUML.GUI.Views
 {
     public class MainWindow : Window
     {

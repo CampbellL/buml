@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using UMLIFY.GUI.ViewModels;
-using UMLIFY.GUI.Views;
+using BUML.GUI.ViewModels;
+using BUML.GUI.Views;
 
-namespace UMLIFY.GUI
+namespace BUML.GUI
 {
     public class App : Application
     {

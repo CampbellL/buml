@@ -3,7 +3,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
 
-namespace UMLIFY.GUI
+namespace BUML.GUI
 {
     class Program
     {

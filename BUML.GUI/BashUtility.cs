@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace UMLIFY.GUI
+namespace BUML.GUI
 {
     public class BashUtility
     {
